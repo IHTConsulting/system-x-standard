@@ -21,7 +21,7 @@ System X is a family of ten precisely defined sizes (X0 through X9) that priorit
 
 ---
 
-## Size Table
+### Size Table
 
 | Size | Width × Height (mm) | Area (m²) | Aspect Ratio |
 |------|---------------------|-----------|--------------|
@@ -40,7 +40,7 @@ All dimensions in **portrait orientation** (width × height).
 
 ---
 
-## Use Cases
+### Use Cases
 
 ### Print & Publishing
 - Magazine layouts with modular grids
