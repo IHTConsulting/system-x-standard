@@ -79,16 +79,325 @@ System X trades **constant aspect ratio** for **integer dimensions** and **arith
 ## Quick Start
 
 ### For Designers
+# System X – Design Software Setup Guide
 
-**Adobe InDesign:**
-1. Download `templates/indesign/system-x-presets.indd`
-2. Import page size presets: File > Document Presets > Define
-3. Select System X size when creating new document
+## Adobe InDesign
 
-**Figma:**
-1. Copy dimensions from `sizes/system-x.json`
-2. Create custom frames: 680 × 960 (X4), 340 × 480 (X6), etc.
-3. Use 5mm or 10mm layout grids
+### Manual Setup (Recommended)
+
+**Create Document Presets:**
+
+1. Open InDesign
+2. Go to **File > Document Presets > Define...**
+3. Click **New...**
+4. Enter preset details:
+
+**X4 Preset Example:**
+- **Preset Name:** System X – X4
+- **Intent:** Print
+- **Number of Pages:** 1 (or as needed)
+- **Width:** 680 mm
+- **Height:** 960 mm
+- **Orientation:** Portrait
+- **Margins:** 40 mm (all sides) — or customize
+- **Columns:** 4
+- **Gutter:** 20 mm
+
+5. Click **OK**, then repeat for other sizes (X0–X9)
+6. To use: **File > New > Document**, select your System X preset
+
+---
+
+### All System X Presets (Copy These Values)
+
+| Size | Width | Height | Suggested Margins | Columns | Gutter |
+|------|-------|--------|-------------------|---------|--------|
+| X0 | 2720 mm | 3840 mm | 80 mm | 6 | 40 mm |
+| X1 | 1920 mm | 2720 mm | 60 mm | 5 | 30 mm |
+| X2 | 1360 mm | 1920 mm | 50 mm | 4 | 20 mm |
+| X3 | 960 mm | 1360 mm | 40 mm | 3 | 20 mm |
+| X4 | 680 mm | 960 mm | 40 mm | 4 | 20 mm |
+| X5 | 480 mm | 680 mm | 30 mm | 3 | 15 mm |
+| X6 | 340 mm | 480 mm | 20 mm | 2 | 10 mm |
+| X7 | 240 mm | 340 mm | 15 mm | 2 | 10 mm |
+| X8 | 170 mm | 240 mm | 10 mm | 1 | — |
+| X9 | 120 mm | 170 mm | 10 mm | 1 | — |
+
+**Tips:**
+- Set units to millimeters: **InDesign > Preferences > Units & Increments**
+- Enable baseline grid: 5 mm or 10 mm increments
+- Add bleed if printing: typically 3–5 mm
+
+---
+
+### Quick Custom Page Size
+
+If you just need a one-off document:
+
+1. **File > New > Document**
+2. **Uncheck** "Primary Text Frame"
+3. In **Width** field, type: `680 mm`
+4. In **Height** field, type: `960 mm`
+5. Adjust margins as needed
+6. Click **Create**
+
+---
+
+## Figma
+
+### Setup Custom Frames
+
+**Method 1: Frame Tool**
+
+1. Select **Frame tool** (F) or press `Ctrl/Cmd + G`
+2. In the right panel, enter dimensions:
+   - **W:** 680
+   - **H:** 960
+3. Set unit to **pixels** (Figma default) or scale for print:
+   - At 96 DPI: 680 mm ≈ 2567 px
+   - Or use mm values directly for concepts
+
+**Method 2: Quick Frames**
+
+Press **A** (Frame tool), then type in top toolbar:
+- `680 × 960` → Creates X4 frame (in pixels)
+- `340 × 480` → Creates X6 frame
+- `170 × 240` → Creates X8 frame
+
+---
+
+### System X Frame Sizes for Figma
+
+**In Pixels (assuming 1mm ≈ 3.78 px at 96 DPI):**
+
+| Size | Pixels (approx 96 DPI) | Millimeters |
+|------|------------------------|-------------|
+| X0 | 10280 × 14515 | 2720 × 3840 |
+| X1 | 7257 × 10280 | 1920 × 2720 |
+| X2 | 5140 × 7257 | 1360 × 1920 |
+| X3 | 3629 × 5140 | 960 × 1360 |
+| X4 | 2571 × 3629 | 680 × 960 |
+| X5 | 1814 × 2571 | 480 × 680 |
+| X6 | 1285 × 1814 | 340 × 480 |
+| X7 | 907 × 1285 | 240 × 340 |
+| X8 | 643 × 907 | 170 × 240 |
+| X9 | 454 × 643 | 120 × 170 |
+
+**Or use actual mm values for print work:**
+
+Simply enter mm dimensions directly:
+- X4: `680 × 960`
+- X6: `340 × 480`
+- X8: `170 × 240`
+
+Figma will interpret these as pixels, but the proportions remain correct.
+
+---
+
+### Layout Grids in Figma
+
+**5mm Grid:**
+
+1. Select your frame
+2. In right panel, click **Layout grid** (+)
+3. Click grid icon, choose **Grid**
+4. Set **Size:** 5 (if working in ~px equivalent: 19 px)
+5. Set **Color:** Light gray
+6. Set **Opacity:** 20%
+
+**10mm Grid:**
+
+- Follow same steps
+- Set **Size:** 10 (or 38 px at 96 DPI)
+
+**Column Grid for X4 (680 × 960):**
+
+1. Select frame
+2. Add **Layout grid** (+)
+3. Choose **Columns**
+4. **Count:** 4
+5. **Margin:** 40 (px or mm equivalent)
+6. **Gutter:** 20
+7. **Color:** Pink/Red (visible guide)
+
+---
+
+### Figma Components (Reusable Frames)
+
+Create reusable frame components:
+
+1. Draw a frame: **680 × 960** (X4)
+2. Right-click → **Create Component** (or `Ctrl/Cmd + Alt + K`)
+3. Name it: **"System X – X4"**
+4. Repeat for X5, X6, X7, etc.
+5. Store in a **System X Library** page
+6. Use **Assets** panel to drag instances into new files
+
+---
+
+### Figma Plugins (Optional)
+
+Search for these plugins to speed up workflow:
+- **"Custom Page Sizes"** – Save and recall dimensions
+- **"Grid Generator"** – Create complex modular grids
+- **"Frame Sizer"** – Quickly resize multiple frames
+
+---
+
+## Adobe Illustrator
+
+### Custom Artboard Sizes
+
+1. **File > New**
+2. Click **Print** tab (or Web/Mobile)
+3. **Width:** 680 mm
+4. **Height:** 960 mm
+5. **Units:** Millimeters
+6. **Orientation:** Portrait
+7. Click **Create**
+
+**To save as preset:**
+
+1. Create document with System X size
+2. **File > Document Setup**
+3. **Edit Artboards** button
+4. Set dimensions, then **Save Preset...**
+5. Name: "System X – X4"
+
+---
+
+### Illustrator Grid Setup
+
+1. **View > Show Grid**
+2. **Illustrator > Preferences > Guides & Grid** (Mac) or **Edit > Preferences** (Win)
+3. **Gridline every:** 10 mm
+4. **Subdivisions:** 2 (creates 5 mm sub-grid)
+5. **Grid style:** Lines or Dots
+6. Click **OK**
+
+Enable **Snap to Grid**: **View > Snap to Grid** (`Shift + Cmd + '`)
+
+---
+
+## Affinity Designer / Publisher
+
+### Page Setup
+
+1. **File > New**
+2. **Type:** Print
+3. **Page Width:** 680 mm
+4. **Page Height:** 960 mm
+5. **DPI:** 300 (for print)
+6. **Orientation:** Portrait
+7. **Margins:** 40 mm (or custom)
+8. Click **Create**
+
+**Save as Template:**
+
+1. **File > Save As Template...**
+2. Name: **System X – X4**
+3. Store in Templates folder
+4. Access via **File > New from Template**
+
+---
+
+### Affinity Grid
+
+1. **View > Show Grid**
+2. **View > Grid and Axis Manager...**
+3. Set **Grid Spacing:** 5 mm or 10 mm
+4. Enable **Snap to Grid**
+
+---
+
+## Sketch
+
+### Artboard Setup
+
+1. Press **A** (Insert Artboard)
+2. In Inspector (right panel):
+   - **Width:** 680
+   - **Height:** 960
+3. Name artboard: **System X – X4**
+
+**Create Artboard Preset:**
+
+1. Create artboard with System X dimensions
+2. Right-click artboard → **Make Symbol** or **Create Shared Style**
+3. Use **Insert > Artboard** and manually enter dimensions for future use
+
+---
+
+### Sketch Layout Settings
+
+1. Select artboard
+2. **View > Canvas > Layout Settings...**
+3. **Total Width:** 680
+4. **Columns:** 4
+5. **Gutter:** 20
+6. **Column Width:** Auto-calculated
+
+---
+
+## CSS / Web Design
+
+For responsive web design using System X proportions:
+
+```css
+/* System X breakpoints (in pixels at 96 DPI) */
+:root {
+  --x9-width: 454px;   /* 120mm */
+  --x8-width: 643px;   /* 170mm */
+  --x7-width: 907px;   /* 240mm */
+  --x6-width: 1285px;  /* 340mm */
+  --x5-width: 1814px;  /* 480mm */
+  --x4-width: 2571px;  /* 680mm */
+}
+
+/* Example media queries */
+@media (min-width: 454px) { /* X9 */ }
+@media (min-width: 643px) { /* X8 */ }
+@media (min-width: 907px) { /* X7 */ }
+@media (min-width: 1285px) { /* X6 */ }
+```
+
+---
+
+## CAD Software (AutoCAD, Fusion 360)
+
+### Drawing Setup
+
+1. Start new drawing
+2. Set **Units:** Millimeters
+3. **Command:** `LIMITS`
+4. **Lower-left corner:** 0,0
+5. **Upper-right corner:** 680,960 (for X4)
+6. **Command:** `ZOOM` → `A` (All)
+7. Draw within these bounds
+
+**Sheet Template:**
+
+1. Create drawing with System X dimensions
+2. Add title block
+3. **File > Save As > Drawing Template (.dwt)**
+4. Name: **SystemX_X4.dwt**
+
+---
+
+## Summary Table: Design Software Setup
+
+| Software | Key Action | Dimensions Entry |
+|----------|------------|------------------|
+| **InDesign** | File > Document Presets > Define | Width: 680 mm, Height: 960 mm |
+| **Figma** | Frame tool (F) | W: 680, H: 960 (or px equivalent) |
+| **Illustrator** | File > New > Print tab | 680 mm × 960 mm |
+| **Affinity** | File > New > Print | Page Width: 680 mm, Height: 960 mm |
+| **Sketch** | Insert Artboard (A) | Width: 680, Height: 960 |
+| **AutoCAD** | LIMITS command | Upper-right: 680,960 |
+
+---
+
+**Pro Tip:** Always set your document units to **millimeters** for consistency with System X specifications. For screen-based work, convert to pixels at your target DPI (typically 96 or 72).
 
 ### For Developers
 ```javascript
