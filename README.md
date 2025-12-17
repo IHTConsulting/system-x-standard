@@ -9,19 +9,19 @@ An open, freely usable dimensional standard for paper, fabrication materials, an
 
 ---
 
-Overview
+## Overview
 
 System X is a family of ten precisely defined sizes (X0 through X9) that prioritizes:
 
-- ✅ **Integer millimetre dimensions** – no fractional arithmetic
-- ✅ **Exact halving** – two Xn+1 sheets fit perfectly in one Xn sheet
-- ✅ **Multiples of 5mm** – simplified division and mental calculation
-- ✅ **Rational aspect ratios** – no dependence on √2 or other irrationals
-- ✅ **Cross-domain applicability** – paper, screens, industrial fabrication
+- **Integer millimetre dimensions** – no fractional arithmetic
+- **Exact halving** – two Xn+1 sheets fit perfectly in one Xn sheet
+- **Multiples of 5mm** – simplified division and mental calculation
+- **Rational aspect ratios** – no dependence on √2 or other irrationals
+- **Cross-domain applicability** – paper, screens, industrial fabrication
 
 ---
 
-Size Table
+## Size Table
 
 | Size | Width × Height (mm) | Area (m²) | Aspect Ratio |
 |------|---------------------|-----------|--------------|
@@ -62,7 +62,7 @@ Use Cases
 
 ---
 
-Comparison with ISO 216
+## Comparison with ISO 216
 
 | Feature | System X | ISO 216 (A-series) |
 |---------|----------|-------------------|
@@ -76,18 +76,7 @@ System X trades **constant aspect ratio** for **integer dimensions** and **arith
 
 ---
 
-## 📦 What's Included
-
-- **`specification.md`** – Full technical specification (~10,000 words)
-- **`sizes/`** – JSON, CSV, and XML data files with all dimensions
-- **`templates/`** – Design templates for Adobe, Figma, Affinity
-- **`converters/`** – Python/JavaScript tools for dimension conversion
-- **`examples/`** – Sample layouts and use case demonstrations
-- **`assets/`** – SVG diagrams and reference charts
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### For Designers
 
@@ -125,7 +114,7 @@ print(f"Cut sheet to: {x5.width}mm × {x5.height}mm")
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - **[Full Technical Specification](specification.md)** – Complete system definition
 - **[Use Cases & Examples](docs/use-cases.md)** – Real-world applications
@@ -146,7 +135,7 @@ You are free to:
 - ✅ Redistribute freely
 ---
 
-## 🌟 Why System X?
+## Why System X?
 
 > "In a world of irrational paper sizes, sometimes the most elegant solution is the one you can calculate in your head."
 
@@ -160,7 +149,7 @@ If you value **simplicity**, **predictability**, and **mental arithmetic** over 
 
 ---
 
-## 🔗 Related Projects
+## Related Projects
 
 - [ISO 216 on Wikipedia](https://en.wikipedia.org/wiki/ISO_216)
 - [Paper Sizes Info](https://papersizes.io/)
