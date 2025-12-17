@@ -92,35 +92,54 @@ System X trades **constant aspect ratio** for **integer dimensions** and **arith
 
 ### For Developers
 ```javascript
-// Install (npm example - hypothetical)
-npm install system-x-dimensions
+// Just use the dimensions directly - nothing to install!
+const systemX = {
+  X0: { width: 2720, height: 3840 },
+  X1: { width: 1920, height: 2720 },
+  X2: { width: 1360, height: 1920 },
+  X3: { width: 960,  height: 1360 },
+  X4: { width: 680,  height: 960  },
+  X5: { width: 480,  height: 680  },
+  X6: { width: 340,  height: 480  },
+  X7: { width: 240,  height: 340  },
+  X8: { width: 170,  height: 240  },
+  X9: { width: 120,  height: 170  }
+};
 
-// Use in code
-const systemX = require('system-x-dimensions');
 console.log(systemX.X4); 
-// { width: 680, height: 960, units: 'mm' }
+// { width: 680, height: 960 }
+
+// Set canvas size for X6
+canvas.width = systemX.X6.width;
+canvas.height = systemX.X6.height;
 ```
 
 ### For Fabrication
 ```python
-# Python example
-from system_x import sizes
+# Copy these dimensions - no installation needed!
+SYSTEM_X = {
+    'X0': (2720, 3840),
+    'X1': (1920, 2720),
+    'X2': (1360, 1920),
+    'X3': (960,  1360),
+    'X4': (680,  960),
+    'X5': (480,  680),
+    'X6': (340,  480),
+    'X7': (240,  340),
+    'X8': (170,  240),
+    'X9': (120,  170)
+}
 
 # Get X5 dimensions in mm
-x5 = sizes.get('X5')
-print(f"Cut sheet to: {x5.width}mm × {x5.height}mm")
+width, height = SYSTEM_X['X5']
+print(f"Cut sheet to: {width}mm × {height}mm")
 # Output: Cut sheet to: 480mm × 680mm
+
+# Program your CNC
+def cut_sheet(size):
+    w, h = SYSTEM_X[size]
+    return f"G1 X{w} Y{h}"
 ```
-
----
-
-## Documentation
-
-- **[Full Technical Specification](specification.md)** – Complete system definition
-- **[Use Cases & Examples](docs/use-cases.md)** – Real-world applications
-- **[Comparison Guide](docs/comparison.md)** – System X vs other standards
-- **[Implementation Guide](docs/implementation.md)** – Software setup instructions
-- **[FAQ](docs/faq.md)** – Frequently asked questions
 
 ---
 
@@ -158,7 +177,7 @@ If you value **simplicity**, **predictability**, and **mental arithmetic** over 
 
 ---
 
-**Star this repo** ⭐ if you find System X useful!
+**Star this repo** if you find System X useful!
 
 ---
 
