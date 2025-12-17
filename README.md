@@ -40,7 +40,7 @@ All dimensions in **portrait orientation** (width × height).
 
 ---
 
-Use Cases
+## Use Cases
 
 ### Print & Publishing
 - Magazine layouts with modular grids
